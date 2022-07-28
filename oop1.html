@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="500" height="600" style="border: 1px solid red;"></canvas>
+</body>
+</html>
+<script>
+    // xây dựng 1 cái máy tính có 4 chức năng
+    // ngôn ngữ thủ tục
+    // 4 function + - * /
+    //huonges đối tượng: coi như có 1 khung của máy tính (class calculate)
+    // 2 đặc điểm phải có: 2 số
+    // 4 chức năng:+ - * /
+    class Circle {
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+    
+    getRadius() {
+        return this.radius;
+    }
+    getArea() {
+        return Math.PI * this.radius * this.radius;
+    }
+    getPerimeter() {
+        return Math.PI * 2* this.radius;
+    }
+    }
+    let circle1 = new Circle(100,"red");
+    let radius = circle1.getRadius();
+    let area = circle1.getArea();
+    let perimeter = circle1.getPerimeter();
+    document.write("bk la"+ radius + "<br>"+ "dien tich la:" + area+ "<br>"+ "chu vi la: "+ perimeter)
+    let canvas = document.getElementById("mycanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(100, 100,circle1.getRadius(), 0, 2* Math.PI );
+    ctx.stroke();
+</script>
