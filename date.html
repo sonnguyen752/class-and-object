@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xây dựng lớp Date</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class MyDate {
+        constructor (d, m, y) {
+            this.day = d;
+            this.month = m;
+            this.year = y;
+        }
+        getDay() {
+            return this.day;
+        }
+        getMonth() {
+            return this.month;
+        }
+        getYear() {
+            return this.year;
+        }
+        setDay(ddd) {
+            this.day = ddd;
+        }
+        setMonth(mm) {
+            this.month = mm;
+        }
+        setYear(yyy) {
+            this.year = yyy;
+        }
+        setDate() {
+            alert("nhap ngay thang nam moii");
+        }
+        toString() {
+            date1.toString()
+        }
+    }
+    let date = new MyDate(12,3,2020);
+    // date.getDay
+    let date1 = (date.getDay()+"/" + date.getMonth() +"/" + date.getYear());
+    alert (date1)  
+</script>
