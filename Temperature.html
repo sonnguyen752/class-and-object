@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doi nhiet do </title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c;
+            // this.f = f;
+            // this.k = k;
+        }
+        getDoK() {
+            return this.c + 273.15;
+        }
+        getDoF() {
+            return 9 * this.c / 5 +32;
+        }
+       
+    }
+    // debugger;
+    let ab = +prompt("nhap nhiet do muon/ chuyen");
+    let temperature = new Temperature(ab); 
+    let doK = temperature.getDoK();
+    let doF = temperature.getDoF();
+    document.write(ab+ " do C = "+ doF +" do F");
+    document.write("<br>");
+    document.write(ab + " do C = "+ doK +" do K");
+</script>
