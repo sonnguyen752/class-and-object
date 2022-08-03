@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô tả hoạt động của đèn và pin</title>
+</head>
+<body>
+    
+    <script src="den.js"></script>
+    <script src="pin.js"> </script>
+    <script>
+        let mybattery = new Battery();
+        let myflashLamp = new FlashLamp(true, mybattery);
+        mybattery.setEnergy(50);
+        myflashLamp.turnOff();
+        myflashLamp.setBattery(mybattery);
+    // myflashLamp.light();      
+    document.write(myflashLamp.getBatteryInfo());
+    </script>
+    
+</body>
+</html>
